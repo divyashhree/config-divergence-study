@@ -1,0 +1,51 @@
+{
+  "run_id": "328b9ec4",
+  "repo_id": "stefanprodan/podinfo",
+  "repo_path": "data\\repos\\podinfo",
+  "commit_sha": "HEAD",
+  "run_start": "2026-11-22T19:26:56.260857+00:00",
+  "run_end": "2026-11-22T19:26:58.050480+00:00",
+  "duration_seconds": 1.789623,
+  "python_version": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "charts_found": 1,
+  "charts_with_envs": 1,
+  "total_divergences": 9,
+  "total_comparable_paths": "133",
+  "raw_divergence_density": 0.0677,
+  "categories_found": [
+    "resource_limits",
+    "replica_scaling",
+    "feature_flag",
+    "image_version"
+  ],
+  "output_files": [
+    "data\\outputs\\podinfo\\divergences.csv",
+    "data\\outputs\\podinfo\\category_summary.csv",
+    "data\\outputs\\podinfo\\env_pair_summary.csv",
+    "data\\outputs\\podinfo\\snapshot_metrics.json",
+    "data\\outputs\\podinfo\\divergence_analysis.png"
+  ],
+  "chart_summaries": [
+    {
+      "total_divergences": 9,
+      "total_comparable_paths": 133,
+      "raw_divergence_density": 0.06766917293233082,
+      "by_category": {
+        "replica_scaling": 3,
+        "feature_flag": 1,
+        "image_version": 1,
+        "resource_limits": 4
+      },
+      "by_env_pair": {
+        "defaults::production": 9
+      },
+      "high_confidence_count": 9,
+      "from_default_count": 0,
+      "chart_name": "podinfo",
+      "chart_path": "charts/podinfo",
+      "environments": [
+        "production"
+      ]
+    }
+  ]
+}

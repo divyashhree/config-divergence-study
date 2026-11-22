@@ -1,0 +1,20 @@
+{
+  "raw_divergence_count": 9,
+  "raw_divergence_density": 0.0677,
+  "category_counts": {
+    "resource_limits": 4,
+    "replica_scaling": 3,
+    "feature_flag": 1,
+    "image_version": 1
+  },
+  "category_densities": {
+    "resource_limits": 0.0301,
+    "replica_scaling": 0.0226,
+    "feature_flag": 0.0075,
+    "image_version": 0.0075
+  },
+  "high_confidence_count": 9,
+  "from_default_count": 0,
+  "typically_env_specific_count": 9,
+  "total_comparable_paths": "133"
+}

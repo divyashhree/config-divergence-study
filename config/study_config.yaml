@@ -1,0 +1,161 @@
+# =============================================================================
+# Environment Configuration Divergence Study — Master Configuration
+# =============================================================================
+
+study:
+  name: "Environment Configuration Divergence in Cloud-Native Projects"
+  version: "0.1.0"
+
+# --- Repository Discovery ---
+discovery:
+  github_search_queries:
+    - "filename:values-prod.yaml language:YAML"
+    - "filename:values-production.yaml language:YAML"
+    - "filename:values-staging.yaml language:YAML"
+    - "filename:values.prod.yaml language:YAML"
+  max_candidates: 200
+  min_stars: 5
+  min_commits: 50
+  min_environments: 2
+  min_history_days: 180
+  min_observation_days: 90
+  excluded_repos: []
+  # GitHub API rate-limit safety
+  requests_per_second: 1.0
+  retry_max: 3
+  retry_backoff_seconds: 60
+
+# --- Environment Identification ---
+environments:
+  # Patterns used to identify environment-specific values files
+  name_patterns:
+    production: ["prod", "production", "prd"]
+    staging: ["staging", "stg", "stage", "preprod", "pre-prod"]
+    development: ["dev", "development", "local"]
+    testing: ["test", "testing", "qa", "uat"]
+  # File patterns for environment values
+  file_patterns:
+    - "values-{env}.yaml"
+    - "values-{env}.yml"
+    - "values.{env}.yaml"
+    - "values.{env}.yml"
+    - "{env}/values.yaml"
+    - "{env}/values.yml"
+    - "environments/{env}/values.yaml"
+    - "envs/{env}/values.yaml"
+    - "deploy/{env}/values.yaml"
+
+# --- Configuration Parsing ---
+parsing:
+  # Helm-specific
+  helm:
+    default_values_file: "values.yaml"
+    chart_file: "Chart.yaml"
+    max_file_size_bytes: 1048576  # 1MB
+  # Normalization
+  normalize_key_order: true
+  normalize_whitespace: true
+  treat_null_as_missing: true
+  string_numeric_equivalence: false  # "3" != 3
+
+# --- Divergence Taxonomy ---
+taxonomy:
+  categories:
+    replica_scaling:
+      paths: ["replicaCount", "replicas", "autoscaling.*", "hpa.*"]
+      description: "Replica count and autoscaling configuration"
+    resource_limits:
+      paths: ["resources.*", "*.resources.*"]
+      description: "CPU and memory requests/limits"
+    image_version:
+      paths: ["image.*", "*.image.*"]
+      description: "Container image repository, tag, or pull policy"
+    health_check:
+      paths: ["*probe*", "livenessProbe.*", "readinessProbe.*", "startupProbe.*"]
+      description: "Health check and probe configuration"
+    env_variable:
+      paths: ["env", "env.*", "envFrom.*", "extraEnv.*", "extraEnvVars.*"]
+      description: "Environment variables and config injection"
+    security:
+      paths: ["*security*", "*tls*", "*ssl*", "*rbac*", "*serviceAccount*", "*networkPolicy*"]
+      description: "Security, TLS, RBAC, network policy"
+    networking:
+      paths: ["service.*", "ingress.*", "*port*", "*host*"]
+      description: "Service, ingress, and networking"
+    feature_flag:
+      paths: ["*.enabled", "enabled", "*.enable"]
+      description: "Feature toggles and component enablement"
+    persistence:
+      paths: ["persistence.*", "*storage*", "*pvc*", "*volume*"]
+      description: "Storage and persistence configuration"
+    unknown:
+      paths: []
+      description: "Differences not matching any known category"
+
+# --- Secret Redaction ---
+secrets:
+  redaction_patterns:
+    - "password"
+    - "secret"
+    - "token"
+    - "key"
+    - "apikey"
+    - "api_key"
+    - "api-key"
+    - "credential"
+    - "private"
+    - "auth"
+    - "connectionstring"
+    - "connection_string"
+  redaction_value: "[REDACTED]"
+
+# --- Observation Windows ---
+longitudinal:
+  default_window_days: 90
+  alternative_windows: [30, 180]
+  min_post_snapshot_days: 30
+  snapshot_interval_days: 30  # How often to sample snapshots
+
+# --- Classification ---
+classification:
+  labels: ["intentional", "accidental", "suspicious", "undetermined"]
+  require_evidence: true
+  min_reviewers: 2
+
+# --- Maintenance Events ---
+maintenance:
+  config_file_patterns:
+    - "*.yaml"
+    - "*.yml"
+    - "values*.yaml"
+    - "Chart.yaml"
+    - "kustomization.yaml"
+  corrective_keywords:
+    - "fix"
+    - "bug"
+    - "hotfix"
+    - "patch"
+    - "correct"
+    - "revert"
+    - "rollback"
+    - "sync"
+    - "align"
+    - "mismatch"
+    - "wrong"
+    - "missing"
+    - "typo"
+    - "broken"
+  exclude_keywords:
+    - "chore"
+    - "docs"
+    - "readme"
+    - "changelog"
+    - "ci"
+    - "test"
+
+# --- Analysis ---
+analysis:
+  significance_level: 0.05
+  multiple_testing_correction: "bonferroni"
+  min_repos_for_regression: 8
+  bootstrap_iterations: 1000

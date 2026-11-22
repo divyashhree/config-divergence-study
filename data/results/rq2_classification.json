@@ -1,0 +1,75 @@
+{
+  "research_question": "RQ2: How reliably can independent reviewers classify intentional vs accidental divergence?",
+  "agreement_report": {
+    "kappa": 0.0,
+    "raw_agreement": 0.7,
+    "expected_agreement": 0.7,
+    "n_cases": 10,
+    "n_agree": 7,
+    "n_disagree": 3,
+    "confusion_matrix": {
+      "intentional": {
+        "intentional": 7,
+        "suspicious": 0
+      },
+      "suspicious": {
+        "intentional": 3,
+        "suspicious": 0
+      }
+    },
+    "label_prevalence": {
+      "intentional": {
+        "reviewer_a_count": 10,
+        "reviewer_a_proportion": 1.0,
+        "reviewer_b_count": 7,
+        "reviewer_b_proportion": 0.7
+      },
+      "suspicious": {
+        "reviewer_a_count": 0,
+        "reviewer_a_proportion": 0.0,
+        "reviewer_b_count": 3,
+        "reviewer_b_proportion": 0.3
+      }
+    },
+    "all_labels": [
+      "intentional",
+      "suspicious"
+    ],
+    "interpretation": "Slight agreement",
+    "bootstrap_ci": {
+      "ci_lower": 0.0,
+      "ci_upper": 1.0,
+      "kappa_mean": 0.029,
+      "kappa_std": 0.1678
+    },
+    "disagreement_details": [
+      {
+        "divergence_id": "2a972d6f-1cd8-4ede-91c8-903f457ae6b8",
+        "label_a": "intentional",
+        "label_b": "suspicious"
+      },
+      {
+        "divergence_id": "919bf68d-6a94-4a02-89bd-0139caa0d408",
+        "label_a": "intentional",
+        "label_b": "suspicious"
+      },
+      {
+        "divergence_id": "fba06997-669d-43d8-bb2a-e9ef08feca68",
+        "label_a": "intentional",
+        "label_b": "suspicious"
+      }
+    ],
+    "reviewer_a_id": "reviewer_A",
+    "reviewer_b_id": "reviewer_B"
+  },
+  "kappa": 0.0,
+  "raw_agreement": 0.7,
+  "interpretation": "Slight agreement (Landis & Koch)",
+  "label_distribution_reviewer_A": {
+    "intentional": 10
+  },
+  "label_distribution_reviewer_B": {
+    "intentional": 7,
+    "suspicious": 3
+  }
+}

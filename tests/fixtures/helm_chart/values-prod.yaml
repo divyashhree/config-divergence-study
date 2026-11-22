@@ -1,0 +1,73 @@
+# Production environment values
+# Higher replicas, more resources, stricter security
+
+replicaCount: 3
+
+image:
+  repository: myorg/webapp
+  tag: "v1.2.3"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: webapp.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: webapp-tls
+      hosts:
+        - webapp.example.com
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+  limits:
+    cpu: "1"
+    memory: 1Gi
+
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilization: 70
+
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: http
+  initialDelaySeconds: 30
+  periodSeconds: 10
+
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: http
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+env:
+  - name: LOG_LEVEL
+    value: "warn"
+  - name: DB_HOST
+    value: "prod-db.internal"
+
+persistence:
+  enabled: true
+  storageClass: "gp3"
+  size: 50Gi
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  readOnlyRootFilesystem: true
+
+serviceAccount:
+  create: true
+  name: "webapp-prod"

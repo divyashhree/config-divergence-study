@@ -1,0 +1,9 @@
+repo_id,eligible,exclusion_reasons,total_charts,total_environments
+github/airflow-helm-charts,False,Insufficient environments: 0 < 1 (found: {}),0,0
+github/argocd-examples,True,,5,1
+github/flux2-example,False,No Helm charts (Chart.yaml) found,0,0
+github/forecastle,False,Insufficient environments: 0 < 1 (found: {}),0,0
+github/gitops-cert,False,Insufficient environments: 0 < 1 (found: {}),0,0
+github/gitops-promo,False,No Helm charts (Chart.yaml) found,0,0
+github/podinfo,True,,1,1
+github/prom-charts,False,Insufficient environments: 0 < 1 (found: {}),0,0

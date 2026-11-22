@@ -1,0 +1,6 @@
+category,Count,High Confidence,From Default,Proportion
+resource_limits,4,4,0,0.4
+replica_scaling,3,3,0,0.3
+feature_flag,1,1,0,0.1
+image_version,1,1,0,0.1
+networking,1,1,0,0.1

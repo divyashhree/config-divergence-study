@@ -1,0 +1,5 @@
+category,count,typically_env_specific,proportion
+resource_limits,4,True,0.4444
+replica_scaling,3,True,0.3333
+feature_flag,1,True,0.1111
+image_version,1,True,0.1111

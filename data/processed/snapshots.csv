@@ -1,0 +1,3 @@
+snapshot_id,repo_id,commit_sha,commit_date,total_comparable_paths
+dfffc999,argoproj/argocd-example-apps,HEAD,2026-11-22T19:24:19.035771+00:00,10
+328b9ec4,stefanprodan/podinfo,HEAD,2026-11-22T19:26:56.260857+00:00,133

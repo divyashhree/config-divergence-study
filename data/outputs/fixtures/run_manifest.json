@@ -1,0 +1,60 @@
+{
+  "run_id": "2d204b5e",
+  "repo_id": "test/sample-webapp",
+  "repo_path": "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\tests\\fixtures\\helm_chart",
+  "commit_sha": "HEAD",
+  "run_start": "2026-11-22T18:58:43.950689+00:00",
+  "run_end": "2026-11-22T18:58:46.225894+00:00",
+  "duration_seconds": 2.275205,
+  "python_version": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "charts_found": 1,
+  "charts_with_envs": 1,
+  "total_divergences": 23,
+  "total_comparable_paths": "42",
+  "raw_divergence_density": 0.5476,
+  "categories_found": [
+    "replica_scaling",
+    "env_variable",
+    "security",
+    "resource_limits",
+    "image_version",
+    "persistence",
+    "networking",
+    "feature_flag"
+  ],
+  "output_files": [
+    "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\data\\outputs\\fixtures\\divergences.csv",
+    "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\data\\outputs\\fixtures\\category_summary.csv",
+    "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\data\\outputs\\fixtures\\env_pair_summary.csv",
+    "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\data\\outputs\\fixtures\\snapshot_metrics.json",
+    "C:\\Users\\ZSHREE\\.gemini\\antigravity-ide\\scratch\\config-divergence-study\\data\\outputs\\fixtures\\divergence_analysis.png"
+  ],
+  "chart_summaries": [
+    {
+      "total_divergences": 23,
+      "total_comparable_paths": 42,
+      "raw_divergence_density": 0.5476190476190477,
+      "by_category": {
+        "replica_scaling": 5,
+        "env_variable": 4,
+        "image_version": 2,
+        "networking": 1,
+        "security": 4,
+        "feature_flag": 1,
+        "persistence": 2,
+        "resource_limits": 4
+      },
+      "by_env_pair": {
+        "development::production": 23
+      },
+      "high_confidence_count": 12,
+      "from_default_count": 8,
+      "chart_name": "sample-webapp",
+      "chart_path": "",
+      "environments": [
+        "development",
+        "production"
+      ]
+    }
+  ]
+}

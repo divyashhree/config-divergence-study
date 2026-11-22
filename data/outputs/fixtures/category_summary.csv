@@ -1,0 +1,9 @@
+category,count,typically_env_specific,proportion
+replica_scaling,5,True,0.2174
+env_variable,4,True,0.1739
+resource_limits,4,True,0.1739
+security,4,False,0.1739
+image_version,2,True,0.087
+persistence,2,True,0.087
+feature_flag,1,True,0.0435
+networking,1,True,0.0435

@@ -1,0 +1,548 @@
+{
+  "research_question": "RQ4: How does divergence evolve over time?",
+  "case_studies": [
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "n_divergences": 1,
+      "categories": {
+        "networking": 1
+      },
+      "env_pairs": {
+        "defaults::production": 1
+      },
+      "confidence_distribution": {
+        "high": 1
+      },
+      "from_default_rate": 0.0,
+      "maintenance_events": 44,
+      "maintenance_categories": {
+        "routine": 25,
+        "sync": 8,
+        "unrelated": 5,
+        "corrective_fix": 4,
+        "resource_tune": 2
+      },
+      "corrective_events": 12
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "n_divergences": 9,
+      "categories": {
+        "resource_limits": 4,
+        "replica_scaling": 3,
+        "feature_flag": 1,
+        "image_version": 1
+      },
+      "env_pairs": {
+        "defaults::production": 9
+      },
+      "confidence_distribution": {
+        "high": 9
+      },
+      "from_default_rate": 0.0,
+      "maintenance_events": 82,
+      "maintenance_categories": {
+        "routine": 71,
+        "unrelated": 5,
+        "corrective_fix": 4,
+        "resource_tune": 2
+      },
+      "corrective_events": 4
+    }
+  ],
+  "n_repos": 2,
+  "monthly_event_counts": [
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-06",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-07",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-07",
+      "category": "sync",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-07",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-08",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-12",
+      "category": "resource_tune",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-12",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2018-12",
+      "category": "sync",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-01",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-02",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-03",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-04",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-04",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-05",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-06",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-06",
+      "category": "sync",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-08",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-08",
+      "category": "sync",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-09",
+      "category": "resource_tune",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2019-10",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2021-01",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2021-02",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2021-03",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2023-11",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-01",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-01",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-05",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-06",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-06",
+      "category": "sync",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2025-09",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2026-05",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "argoproj/argocd-example-apps",
+      "month": "2026-05",
+      "category": "sync",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-07",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-08",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-09",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-10",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-11",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-12",
+      "category": "resource_tune",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2022-12",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-02",
+      "category": "routine",
+      "count": 4
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-03",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-04",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-05",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-06",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-07",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-08",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-09",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-10",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-10",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2023-12",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-01",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-02",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-03",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-04",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-05",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-06",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-06",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-10",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2024-11",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-03",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-05",
+      "category": "resource_tune",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-05",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-05",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-07",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-09",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-09",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-10",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-10",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-11",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2025-12",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-02",
+      "category": "routine",
+      "count": 5
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-03",
+      "category": "routine",
+      "count": 7
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-03",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-04",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-05",
+      "category": "corrective_fix",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-05",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-05",
+      "category": "unrelated",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-06",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-07",
+      "category": "routine",
+      "count": 1
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-08",
+      "category": "routine",
+      "count": 2
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-10",
+      "category": "routine",
+      "count": 3
+    },
+    {
+      "repo_id": "stefanprodan/podinfo",
+      "month": "2026-10",
+      "category": "unrelated",
+      "count": 1
+    }
+  ]
+}

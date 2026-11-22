@@ -1,0 +1,28 @@
+{
+  "raw_divergence_count": 23,
+  "raw_divergence_density": 0.5476,
+  "category_counts": {
+    "replica_scaling": 5,
+    "env_variable": 4,
+    "security": 4,
+    "resource_limits": 4,
+    "image_version": 2,
+    "persistence": 2,
+    "networking": 1,
+    "feature_flag": 1
+  },
+  "category_densities": {
+    "replica_scaling": 0.119,
+    "env_variable": 0.0952,
+    "security": 0.0952,
+    "resource_limits": 0.0952,
+    "image_version": 0.0476,
+    "persistence": 0.0476,
+    "networking": 0.0238,
+    "feature_flag": 0.0238
+  },
+  "high_confidence_count": 12,
+  "from_default_count": 8,
+  "typically_env_specific_count": 19,
+  "total_comparable_paths": "42"
+}

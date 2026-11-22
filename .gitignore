@@ -1,0 +1,32 @@
+# Cloned repositories (large, can be re-cloned)
+data/repos/
+
+# Raw data (intermediate)
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+*.egg
+
+# Logs
+data/logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep outputs and results (they are the research artifacts)
+# !data/outputs/
+# !data/results/
+# !data/processed/

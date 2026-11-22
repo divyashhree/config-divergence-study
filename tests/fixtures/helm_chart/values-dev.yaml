@@ -1,0 +1,32 @@
+# Development environment values
+# Intentionally minimal — most values inherited from defaults
+
+replicaCount: 1
+
+image:
+  tag: "dev-latest"
+  pullPolicy: Always
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
+
+env:
+  - name: LOG_LEVEL
+    value: "debug"
+  - name: DB_HOST
+    value: "dev-db.internal"
+  - name: DEBUG_MODE
+    value: "true"
+
+ingress:
+  enabled: true
+  hosts:
+    - host: webapp-dev.example.com
+      paths:
+        - path: /
+          pathType: Prefix

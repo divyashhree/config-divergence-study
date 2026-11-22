@@ -1,0 +1,72 @@
+{
+  "research_question": "RQ1: What types of configuration divergence occur across environments?",
+  "distribution_stats": {
+    "n_divergences": 10,
+    "n_repositories": 2,
+    "category_distribution": {
+      "resource_limits": 4,
+      "replica_scaling": 3,
+      "networking": 1,
+      "feature_flag": 1,
+      "image_version": 1
+    },
+    "category_proportions": {
+      "resource_limits": 0.4,
+      "replica_scaling": 0.3,
+      "networking": 0.1,
+      "feature_flag": 0.1,
+      "image_version": 0.1
+    },
+    "n_categories": 5,
+    "most_common_category": "resource_limits",
+    "diff_type_distribution": {
+      "value_changed": 7,
+      "null_vs_value": 1,
+      "key_missing_in_b": 1,
+      "key_missing_in_a": 1
+    },
+    "confidence_distribution": {
+      "high": 10
+    },
+    "from_default_count": 0,
+    "from_default_proportion": 0.0,
+    "per_repo_summary": {
+      "mean_divergences": 5.0,
+      "median_divergences": 5.0,
+      "std_divergences": 5.66,
+      "min_divergences": 1,
+      "max_divergences": 9,
+      "mean_categories": 2.5
+    }
+  },
+  "category_table": {
+    "Count": {
+      "resource_limits": 4,
+      "replica_scaling": 3,
+      "feature_flag": 1,
+      "image_version": 1,
+      "networking": 1
+    },
+    "High Confidence": {
+      "resource_limits": 4,
+      "replica_scaling": 3,
+      "feature_flag": 1,
+      "image_version": 1,
+      "networking": 1
+    },
+    "From Default": {
+      "resource_limits": 0,
+      "replica_scaling": 0,
+      "feature_flag": 0,
+      "image_version": 0,
+      "networking": 0
+    },
+    "Proportion": {
+      "resource_limits": 0.4,
+      "replica_scaling": 0.3,
+      "feature_flag": 0.1,
+      "image_version": 0.1,
+      "networking": 0.1
+    }
+  }
+}

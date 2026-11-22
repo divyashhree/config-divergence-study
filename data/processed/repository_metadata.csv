@@ -1,0 +1,3 @@
+repo_id,repo_dir,stars,contributors,environments_detected,first_commit_date,last_commit_date,charts_analyzed,total_divergences,total_comparable_paths
+argoproj/argocd-example-apps,argocd-examples,0,0,production,2018-06-29T08:11:51+00:00,2026-05-19T15:14:20+00:00,1,1,10
+stefanprodan/podinfo,podinfo,0,0,production,2022-07-27T16:11:48+00:00,2026-10-26T21:02:06+00:00,1,9,133

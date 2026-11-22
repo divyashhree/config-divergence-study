@@ -1,0 +1,172 @@
+[
+  {
+    "repo_id": "github/airflow-helm-charts",
+    "assessed_at": "2026-11-22T19:34:18.419291+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "Insufficient environments: 0 < 1 (found: {})"
+    ],
+    "environment_evidence": {},
+    "charts_found": [
+      "charts/airflow"
+    ],
+    "warnings": []
+  },
+  {
+    "repo_id": "github/argocd-examples",
+    "assessed_at": "2026-11-22T19:34:18.487451+00:00",
+    "eligible": true,
+    "exclusion_reasons": [],
+    "environment_evidence": {
+      "helm-guestbook": {
+        "environments": [
+          "production"
+        ],
+        "files": {
+          "production": "helm-guestbook/values-production.yaml"
+        }
+      }
+    },
+    "charts_found": [
+      "apps",
+      "blue-green",
+      "helm-dependency",
+      "helm-guestbook",
+      "plugins/kustomized-helm"
+    ],
+    "warnings": [],
+    "total_environments": 1,
+    "total_charts": 5,
+    "total_files": 129
+  },
+  {
+    "repo_id": "github/flux2-example",
+    "assessed_at": "2026-11-22T19:34:18.526681+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "No Helm charts (Chart.yaml) found"
+    ],
+    "environment_evidence": {},
+    "charts_found": [],
+    "warnings": []
+  },
+  {
+    "repo_id": "github/forecastle",
+    "assessed_at": "2026-11-22T19:34:18.563182+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "Insufficient environments: 0 < 1 (found: {})"
+    ],
+    "environment_evidence": {},
+    "charts_found": [
+      "deployments/kubernetes/chart/forecastle"
+    ],
+    "warnings": []
+  },
+  {
+    "repo_id": "github/gitops-cert",
+    "assessed_at": "2026-11-22T19:34:18.657992+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "Insufficient environments: 0 < 1 (found: {})"
+    ],
+    "environment_evidence": {},
+    "charts_found": [
+      "helm-apps/many-envs-chart",
+      "helm-apps/simple-chart"
+    ],
+    "warnings": []
+  },
+  {
+    "repo_id": "github/gitops-promo",
+    "assessed_at": "2026-11-22T19:34:18.706474+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "No Helm charts (Chart.yaml) found"
+    ],
+    "environment_evidence": {},
+    "charts_found": [],
+    "warnings": []
+  },
+  {
+    "repo_id": "github/podinfo",
+    "assessed_at": "2026-11-22T19:34:18.737120+00:00",
+    "eligible": true,
+    "exclusion_reasons": [],
+    "environment_evidence": {
+      "charts/podinfo": {
+        "environments": [
+          "production"
+        ],
+        "files": {
+          "production": "charts/podinfo/values-prod.yaml"
+        }
+      }
+    },
+    "charts_found": [
+      "charts/podinfo"
+    ],
+    "warnings": [],
+    "total_environments": 1,
+    "total_charts": 1,
+    "total_files": 445
+  },
+  {
+    "repo_id": "github/prom-charts",
+    "assessed_at": "2026-11-22T19:34:18.879289+00:00",
+    "eligible": false,
+    "exclusion_reasons": [
+      "Insufficient environments: 0 < 1 (found: {})"
+    ],
+    "environment_evidence": {},
+    "charts_found": [
+      "charts/alertmanager",
+      "charts/alertmanager-snmp-notifier",
+      "charts/jiralert",
+      "charts/kube-prometheus-stack",
+      "charts/kube-prometheus-stack/charts/crds",
+      "charts/kube-state-metrics",
+      "charts/prom-label-proxy",
+      "charts/prometheus",
+      "charts/prometheus-adapter",
+      "charts/prometheus-blackbox-exporter",
+      "charts/prometheus-cloudwatch-exporter",
+      "charts/prometheus-conntrack-stats-exporter",
+      "charts/prometheus-consul-exporter",
+      "charts/prometheus-couchdb-exporter",
+      "charts/prometheus-druid-exporter",
+      "charts/prometheus-elasticsearch-exporter",
+      "charts/prometheus-fastly-exporter",
+      "charts/prometheus-ipmi-exporter",
+      "charts/prometheus-json-exporter",
+      "charts/prometheus-kafka-exporter",
+      "charts/prometheus-memcached-exporter",
+      "charts/prometheus-modbus-exporter",
+      "charts/prometheus-mongodb-exporter",
+      "charts/prometheus-mysql-exporter",
+      "charts/prometheus-nats-exporter",
+      "charts/prometheus-nginx-exporter",
+      "charts/prometheus-node-exporter",
+      "charts/prometheus-operator-admission-webhook",
+      "charts/prometheus-operator-crds",
+      "charts/prometheus-operator-crds/charts/crds",
+      "charts/prometheus-pgbouncer-exporter",
+      "charts/prometheus-pingdom-exporter",
+      "charts/prometheus-pingmesh-exporter",
+      "charts/prometheus-postgres-exporter",
+      "charts/prometheus-pushgateway",
+      "charts/prometheus-rabbitmq-exporter",
+      "charts/prometheus-redis-exporter",
+      "charts/prometheus-smartctl-exporter",
+      "charts/prometheus-snmp-exporter",
+      "charts/prometheus-sql-exporter",
+      "charts/prometheus-stackdriver-exporter",
+      "charts/prometheus-statsd-exporter",
+      "charts/prometheus-systemd-exporter",
+      "charts/prometheus-to-sd",
+      "charts/prometheus-windows-exporter",
+      "charts/prometheus-yet-another-cloudwatch-exporter"
+    ],
+    "warnings": []
+  }
+]

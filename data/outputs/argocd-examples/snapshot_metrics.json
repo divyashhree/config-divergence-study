@@ -1,0 +1,14 @@
+{
+  "raw_divergence_count": 1,
+  "raw_divergence_density": 0.1,
+  "category_counts": {
+    "networking": 1
+  },
+  "category_densities": {
+    "networking": 0.1
+  },
+  "high_confidence_count": 1,
+  "from_default_count": 0,
+  "typically_env_specific_count": 1,
+  "total_comparable_paths": "10"
+}
